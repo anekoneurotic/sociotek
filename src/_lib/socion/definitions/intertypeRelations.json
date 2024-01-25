@@ -1,0 +1,90 @@
+[
+  {
+    "num": 1,
+    "name": "Identity",
+    "roleName": "Identical"
+  },
+  {
+    "num": 2,
+    "name": "Activation",
+    "roleName": "Activator"
+  },
+  {
+    "num": 3,
+    "name": "Duality",
+    "roleName": "Dual"
+  },
+  {
+    "num": 4,
+    "name": "Mirror",
+    "roleName": "Mirror"
+  },
+  {
+    "num": 5,
+    "name": "Business",
+    "roleName": "Business"
+  },
+  {
+    "num": 6,
+    "name": "Irrational Benefit",
+    "roleName": "Benefactor",
+    "foreignRoleName": "Beneficiary",
+    "rationalityParity": 0
+  },
+  {
+    "num": 7,
+    "name": "Mirage",
+    "roleName": "Mirage"
+  },
+  {
+    "num": 8,
+    "name": "Irrational Supervision",
+    "roleName": "Supervisor",
+    "foreignRoleName": "Supervisee",
+    "rationalityParity": 0
+  },
+  {
+    "num": 9,
+    "name": "Super-Ego",
+    "roleName": "Super-Ego"
+  },
+  {
+    "num": 10,
+    "name": "Quasi-Identity",
+    "roleName": "Quasi-Identical"
+  },
+  {
+    "num": 11,
+    "name": "Extinguishment",
+    "roleName": "Extinguisher"
+  },
+  {
+    "num": 12,
+    "name": "Conflict",
+    "roleName": "Conflictor"
+  },
+  {
+    "num": 13,
+    "name": "Kindred",
+    "roleName": "Kindred"
+  },
+  {
+    "num": 14,
+    "name": "Rational Benefit",
+    "roleName": "Benefactor",
+    "foreignRoleName": "Beneficiary",
+    "rationalityParity": 1
+  },
+  {
+    "num": 15,
+    "name": "Semi-Duality",
+    "roleName": "Semi-Dual"
+  },
+  {
+    "num": 16,
+    "name": "Rational Supervision",
+    "roleName": "Supervisor",
+    "foreignRoleName": "Supervisee",
+    "rationalityParity": 1
+  }
+]

@@ -1,0 +1,103 @@
+[
+  {
+    "num": 1,
+    "name": "ILE",
+    "nickname": "Maverick",
+    "nicknameAlternatives": ["Explorer", "Inventor"]
+  },
+  {
+    "num": 2,
+    "name": "ESE",
+    "nickname": "Entertainer",
+    "nicknameAlternatives": ["Enthusiast"]
+  },
+  {
+    "num": 3,
+    "name": "SEI",
+    "nickname": "Nurturer",
+    "nicknameAlternatives": [
+      "Comforter",
+      "Mediator",
+      "Peacemaker",
+      "Stabilizer"
+    ]
+  },
+  {
+    "num": 4,
+    "name": "LII",
+    "nickname": "Cerebral",
+    "nicknameAlternatives": ["Analyst", "Architect", "Logician"]
+  },
+  {
+    "num": 5,
+    "name": "SLE",
+    "nickname": "Spearhead",
+    "nicknameAlternatives": ["Commander", "Conqueror", "Legionnaire", "Marshal"]
+  },
+  {
+    "num": 6,
+    "name": "EIE",
+    "nickname": "Orator",
+    "nicknameAlternatives": ["Elocutionist", "Lecturer", "Speaker"]
+  },
+  {
+    "num": 7,
+    "name": "IEI",
+    "nickname": "Dreamer",
+    "nicknameAlternatives": ["Lyricist", "Poet", "Romantic", "Sage"]
+  },
+  {
+    "num": 8,
+    "name": "LSI",
+    "nickname": "Regulator",
+    "nicknameAlternatives": ["Bureaucrat", "Inspector"]
+  },
+  {
+    "num": 9,
+    "name": "SEE",
+    "nickname": "Dynamo",
+    "nicknameAlternatives": ["Performer", "Politician", "Powerhouse"]
+  },
+  {
+    "num": 10,
+    "name": "LIE",
+    "nickname": "Enterpriser",
+    "nicknameAlternatives": ["Entrepreneur", "Pioneer"]
+  },
+  {
+    "num": 11,
+    "name": "ILI",
+    "nickname": "Skeptic",
+    "nicknameAlternatives": ["Critic", "Observer"]
+  },
+  {
+    "num": 12,
+    "name": "ESI",
+    "nickname": "Guardian",
+    "nicknameAlternatives": ["Conservator"]
+  },
+  {
+    "num": 13,
+    "name": "IEE",
+    "nickname": "Restless",
+    "nicknameAlternatives": ["Champion", "Networker", "Reporter", "Vivacious"]
+  },
+  {
+    "num": 14,
+    "name": "LSE",
+    "nickname": "Manager",
+    "nicknameAlternatives": ["Provider"]
+  },
+  {
+    "num": 15,
+    "name": "SLI",
+    "nickname": "Mechanic",
+    "nicknameAlternatives": ["Artisan", "Craftsman"]
+  },
+  {
+    "num": 16,
+    "name": "EII",
+    "nickname": "Humanist",
+    "nicknameAlternatives": ["Counselor"]
+  }
+]

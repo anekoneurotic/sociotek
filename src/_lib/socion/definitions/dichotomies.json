@@ -1,0 +1,107 @@
+[
+  {
+    "num": 1,
+    "name": "Rationality",
+    "evenName": "Irrational",
+    "oddName": "Rational",
+    "reininNumber": 4
+  },
+  {
+    "num": 2,
+    "name": "Attitude",
+    "evenName": "Extraverted",
+    "oddName": "Introverted",
+    "reininNumber": 1
+  },
+  {
+    "num": 3,
+    "name": "Perpendicularity",
+    "evenName": "Static",
+    "oddName": "Dynamic",
+    "reininNumber": 5
+  },
+  {
+    "num": 4,
+    "name": "Collectivism",
+    "evenName": "Democratic",
+    "oddName": "Aristocratic",
+    "reininNumber": 7
+  },
+  {
+    "num": 5,
+    "name": "Orientation",
+    "evenName": "Right",
+    "oddName": "Left",
+    "reininNumber": 14
+  },
+  {
+    "num": 6,
+    "name": "Criticality",
+    "evenName": "Positive",
+    "oddName": "Negative",
+    "reininNumber": 13
+  },
+  {
+    "num": 7,
+    "name": "Interrogation",
+    "evenName": "Asking",
+    "oddName": "Declaring",
+    "reininNumber": 15
+  },
+  {
+    "num": 8,
+    "name": "Joviality",
+    "evenName": "Merry",
+    "oddName": "Serious",
+    "reininNumber": 11
+  },
+  {
+    "num": 9,
+    "name": "Obstinacy",
+    "evenName": "Yielding",
+    "oddName": "Obstinate",
+    "reininNumber": 6
+  },
+  {
+    "num": 10,
+    "name": "Formality",
+    "evenName": "Constructive",
+    "oddName": "Emotive",
+    "reininNumber": 9
+  },
+  {
+    "num": 11,
+    "name": "Gender",
+    "evenName": "Logical",
+    "oddName": "Ethical",
+    "reininNumber": 3
+  },
+  {
+    "num": 12,
+    "name": "Mobilization",
+    "evenName": "Judicious",
+    "oddName": "Decisive",
+    "reininNumber": 12
+  },
+  {
+    "num": 13,
+    "name": "Anxiety",
+    "evenName": "Carefree",
+    "oddName": "Farsighted",
+    "reininNumber": 10
+  },
+  {
+    "num": 14,
+    "name": "Elevation",
+    "evenName": "Tactical",
+    "oddName": "Strategic",
+    "reininNumber": 8
+  },
+  {
+    "num": 15,
+    "name": "Abstraction",
+    "evenName": "Intuitive",
+    "oddName": "Sensing",
+    "reininNumber": 2
+  }
+]
