@@ -49,6 +49,19 @@ const UNSELECTED_GLOW_COLOR: FilterColor = {
 
 export default function TypeGrid() {
   const [activeType, setActiveType] = useState<ActiveType>(null);
+  const [touchClearAfter, setTouchClearAfter] = useState<Date>(new Date());
+
+  useEffect(() => {
+    const clearActiveType = () => {
+      if (new Date() > touchClearAfter) {
+        setActiveType(null);
+      }
+    };
+
+    window.addEventListener("touchstart", clearActiveType, false);
+    return () =>
+      window.removeEventListener("touchstart", clearActiveType, false);
+  });
 
   const squares = QUADRA_TYPES.map((quadra, quadraIndex) =>
     quadra.map((sociotype, sociotypeIndex) => (
@@ -66,17 +79,10 @@ export default function TypeGrid() {
         }
         activeType={activeType}
         setActiveType={setActiveType}
+        setTouchClearAfter={setTouchClearAfter}
       />
     )),
   );
-
-  useEffect(() => {
-    const clearActiveType = () => setActiveType(null);
-
-    window.addEventListener("touchstart", clearActiveType, false);
-    return () =>
-      window.removeEventListener("touchstart", clearActiveType, false);
-  });
 
   return (
     <svg
@@ -92,7 +98,13 @@ export default function TypeGrid() {
         {createGlowFilter(UNSELECTED_GLOW_COLOR)}
       </defs>
 
-      <g onMouseLeave={() => setActiveType(null)}>
+      <g
+        onPointerLeave={({ pointerType }) => {
+          if (pointerType === "mouse") {
+            setActiveType(null);
+          }
+        }}
+      >
         <rect
           x={SQUARE_PADDING}
           y={SQUARE_PADDING}

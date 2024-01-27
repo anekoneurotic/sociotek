@@ -35,9 +35,6 @@ export default class Sociotype {
   getDirectedRelationWith(
     foreignSociotype: Sociotype,
   ): DirectedIntertypeRelation {
-    if (this.num === 7 && foreignSociotype.num === 4) {
-      console.log("Sociotype", this.name, foreignSociotype.name);
-    }
     return Socion.getDirectedRelation(this, foreignSociotype);
   }
 }

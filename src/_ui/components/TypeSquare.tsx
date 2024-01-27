@@ -14,6 +14,7 @@ export default function TypeSquare({
   filter,
   activeType,
   setActiveType,
+  setTouchClearAfter,
 }: {
   sociotype: Sociotype;
   origin: Coordinates;
@@ -21,17 +22,22 @@ export default function TypeSquare({
   filter: string;
   activeType: ActiveType;
   setActiveType: Dispatch<SetStateAction<ActiveType>>;
+  setTouchClearAfter: Dispatch<SetStateAction<Date>>;
 }) {
   return (
     <g
-      onMouseOver={() => setActiveType(sociotype)}
-      onTouchStart={(event) => {
-        if (activeType === sociotype) {
-          setActiveType(null);
-        } else {
+      onPointerEnter={({ pointerType }) => {
+        if (pointerType === "mouse") {
           setActiveType(sociotype);
         }
-        event.stopPropagation();
+      }}
+      onTouchStart={() => {
+        if (activeType !== sociotype) {
+          const now = new Date();
+          now.setMilliseconds(now.getMilliseconds() + 100);
+          setTouchClearAfter(now);
+          setActiveType(sociotype);
+        }
       }}
     >
       <rect
