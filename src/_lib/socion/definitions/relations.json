@@ -26,10 +26,9 @@
   },
   {
     "num": 6,
-    "name": "Irrational Benefit",
+    "name": "Benefitting",
     "roleName": "Benefactor",
-    "foreignRoleName": "Beneficiary",
-    "rationalityParity": 0
+    "foreignRoleName": "Beneficiary"
   },
   {
     "num": 7,
@@ -38,10 +37,9 @@
   },
   {
     "num": 8,
-    "name": "Irrational Supervision",
+    "name": "Supervising",
     "roleName": "Supervisor",
-    "foreignRoleName": "Supervisee",
-    "rationalityParity": 0
+    "foreignRoleName": "Supervisee"
   },
   {
     "num": 9,
@@ -70,10 +68,9 @@
   },
   {
     "num": 14,
-    "name": "Rational Benefit",
-    "roleName": "Benefactor",
-    "foreignRoleName": "Beneficiary",
-    "rationalityParity": 1
+    "name": "Benefitted",
+    "roleName": "Beneficiary",
+    "foreignRoleName": "Benefactor"
   },
   {
     "num": 15,
@@ -82,9 +79,8 @@
   },
   {
     "num": 16,
-    "name": "Rational Supervision",
-    "roleName": "Supervisor",
-    "foreignRoleName": "Supervisee",
-    "rationalityParity": 1
+    "name": "Supervised",
+    "roleName": "Supervisee",
+    "foreignRoleName": "Supervisor"
   }
 ]

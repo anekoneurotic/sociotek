@@ -1,10 +1,8 @@
-import { Socion } from ".";
-
-import IntertypeRelation from "./IntertypeRelation";
+import Relation from "./Relation";
 import Sociotype from "./Sociotype";
 
-export default class DirectedIntertypeRelation {
-  readonly relation: IntertypeRelation;
+export default class ResolvedRelation {
+  readonly relation: Relation;
   readonly num: number;
   readonly name: string;
   readonly sociotype: Sociotype;
@@ -13,7 +11,7 @@ export default class DirectedIntertypeRelation {
   readonly foreignRole: string;
 
   constructor(
-    relation: IntertypeRelation,
+    relation: Relation,
     sociotype: Sociotype,
     foreignSociotype: Sociotype,
   ) {
@@ -24,18 +22,9 @@ export default class DirectedIntertypeRelation {
     this.sociotype = sociotype;
     this.foreignSociotype = foreignSociotype;
 
-    if (relation.rationalityParity !== undefined && relation.foreignRoleName) {
-      const rationality = Socion.getDichotomyByNum(1);
-
-      if (
-        rationality.resolveFor(sociotype).parity === relation.rationalityParity
-      ) {
-        this.role = relation.roleName;
-        this.foreignRole = relation.foreignRoleName;
-      } else {
-        this.role = relation.foreignRoleName;
-        this.foreignRole = relation.roleName;
-      }
+    if (relation.foreignRoleName) {
+      this.role = relation.roleName;
+      this.foreignRole = relation.foreignRoleName;
     } else {
       this.role = relation.roleName;
       this.foreignRole = relation.roleName;
@@ -44,7 +33,7 @@ export default class DirectedIntertypeRelation {
 
   toString(): string {
     return (
-      "DirectedIntertypeRelation {" +
+      "ResolvedRelation {" +
       `num: ${this.num}` +
       `, name: "${this.name}"` +
       `, sociotype: "${this.sociotype.name}"` +

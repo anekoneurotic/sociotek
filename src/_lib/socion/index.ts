@@ -1,14 +1,14 @@
 import Dichotomy from "./Dichotomy";
-import DirectedIntertypeRelation from "./DirectedIntertypeRelation";
-import IntertypeRelation from "./IntertypeRelation";
+import ResolvedRelation from "./ResolvedRelation";
+import Relation from "./Relation";
 import Parity from "./Parity";
 import ResolvedDichotomy from "./ResolvedDichotomy";
 import Sociotype from "./Sociotype";
 
 export {
   Dichotomy,
-  DirectedIntertypeRelation,
-  IntertypeRelation,
+  ResolvedRelation as DirectedIntertypeRelation,
+  Relation as IntertypeRelation,
   Parity,
   ResolvedDichotomy,
   Sociotype,
@@ -16,7 +16,7 @@ export {
 
 export abstract class Socion {
   static readonly sociotypes = Sociotype.sociotypes;
-  static readonly intertypeRelations = IntertypeRelation.intertypeRelations;
+  static readonly intertypeRelations = Relation.relations;
   static readonly dichotomies = Dichotomy.dichotomies;
 
   static getSociotypeByNum(num: number): Sociotype {
@@ -35,8 +35,8 @@ export abstract class Socion {
     );
   }
 
-  static getRelationByNum(num: number): IntertypeRelation {
-    return unsafeSearch<IntertypeRelation>(
+  static getRelationByNum(num: number): Relation {
+    return unsafeSearch<Relation>(
       Socion.intertypeRelations,
       (relation) => relation.num === num,
       `Invalid IntertypeRelation number ${num}`,
@@ -51,24 +51,13 @@ export abstract class Socion {
     );
   }
 
-  static getRelationPartner(
-    relation: IntertypeRelation,
-    sociotype: Sociotype,
-  ): Sociotype {
-    const foreignSociotypeId = computeRelationPartnerId(
-      relation._id,
-      sociotype._id,
-    );
-    return Socion.#getSociotypeById(foreignSociotypeId);
-  }
-
-  static getDirectedRelation(
+  static resolveRelation(
     sociotype: Sociotype,
     foreignSociotype: Sociotype,
-  ): DirectedIntertypeRelation {
+  ): ResolvedRelation {
     const relationId = computeRelationId(sociotype._id, foreignSociotype._id);
     const relation = Socion.#getRelationById(relationId);
-    return relation.getDirectedRelation(sociotype, foreignSociotype);
+    return relation.resolveFor(sociotype, foreignSociotype);
   }
 
   static resolveDichotomy(
@@ -87,8 +76,8 @@ export abstract class Socion {
     );
   }
 
-  static #getRelationById(id: number): IntertypeRelation {
-    return unsafeSearch<IntertypeRelation>(
+  static #getRelationById(id: number): Relation {
+    return unsafeSearch<Relation>(
       Socion.intertypeRelations,
       (relation) => relation._id === id,
       `Invalid IntertypeRelation id ${id}`,
@@ -120,14 +109,12 @@ function computeRelationId(
   sociotypeId: number,
   foreignSociotypeId: number,
 ): number {
-  return sociotypeId ^ foreignSociotypeId;
-}
-
-function computeRelationPartnerId(
-  relationId: number,
-  sociotypeId: number,
-): number {
-  return relationId ^ sociotypeId;
+  const comparison = sociotypeId ^ foreignSociotypeId;
+  if (comparison & 0b0100 && sociotypeId & 0b0001) {
+    return comparison ^ 0b1000;
+  } else {
+    return comparison;
+  }
 }
 
 function computeDichotomyParity(

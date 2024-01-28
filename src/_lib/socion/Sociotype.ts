@@ -1,6 +1,6 @@
 import { Socion } from ".";
 
-import DirectedIntertypeRelation from "./DirectedIntertypeRelation";
+import ResolvedRelation from "./ResolvedRelation";
 
 import sociotypeDefinitions from "./definitions/sociotypes.json";
 
@@ -32,9 +32,7 @@ export default class Sociotype {
     return `Sociotype {num: ${this.num}, name: "${this.name}"}`;
   }
 
-  getDirectedRelationWith(
-    foreignSociotype: Sociotype,
-  ): DirectedIntertypeRelation {
-    return Socion.getDirectedRelation(this, foreignSociotype);
+  getDirectedRelationWith(foreignSociotype: Sociotype): ResolvedRelation {
+    return Socion.resolveRelation(this, foreignSociotype);
   }
 }
