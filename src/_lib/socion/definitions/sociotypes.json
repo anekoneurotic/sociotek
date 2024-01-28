@@ -2,14 +2,14 @@
   {
     "num": 1,
     "name": "ILE",
-    "nickname": "Maverick",
-    "nicknameAlternatives": ["Explorer", "Inventor"]
+    "nickname": "Tinkerer",
+    "nicknameAlternatives": ["Innovator", "Inventor"]
   },
   {
     "num": 2,
     "name": "ESE",
     "nickname": "Entertainer",
-    "nicknameAlternatives": ["Enthusiast"]
+    "nicknameAlternatives": ["Enthusiast", "Host"]
   },
   {
     "num": 3,
