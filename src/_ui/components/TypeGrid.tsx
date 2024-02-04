@@ -31,10 +31,10 @@ const QUADRA_COORDINATES: ReadonlyArray<ReadonlyArray<Coordinates>> = [
   distributeSquares({ origin: [0, SQUARE_EDGE * 2] }),
 ];
 const QUADRA_COLORS: ReadonlyArray<FilterColor> = [
-  { id: "typegrid-alpha-glow", color: "rgb(0, 255, 0)" },
+  { id: "typegrid-alpha-glow", color: "rgb(200, 200, 0)" },
   { id: "typegrid-beta-glow", color: "rgb(255, 0, 0)" },
   { id: "typegrid-gamma-glow", color: "rgb(0, 0, 255)" },
-  { id: "typegrid-delta-glow", color: "rgb(200, 200, 0)" },
+  { id: "typegrid-delta-glow", color: "rgb(0, 255, 0)" },
 ];
 
 const SELECTED_GLOW_COLOR: FilterColor = {
